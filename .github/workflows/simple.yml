@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a
-      string
-        - run: echo "hello world"
+        string
+         run: echo "hello world"
       - name: multiline
-      script
-        run: |
-          node -v
-          npm -v
+        script
+          run: |
+            node -v
+            npm -v
