@@ -6,6 +6,24 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+          whoami
+          hostname
+          echo $GITHUB_SHA $GITUB_REPOSITORY $GITHUB_WORKSPACE
+          echo "${{github.token}}"
+          #git clone git@github.com:$GITUB_REPOSITORY
+          #git checkout $GITHUB_SHA
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+          whoami
+          hostname
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1 #release or branch name or specific commit. Or a local yaml using ./
